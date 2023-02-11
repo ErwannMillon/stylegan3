@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gan-server
+  labels:
+    app: gan-server
+    type: inference-server
+
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: gan-server
+      labels:
+        app: gan-server
+        type: inference-server
+
+    spec:
+      containers:
+        - name: gan-server
+          image: erwannmillon/gan2
+      #     resources:
+      #       limits:
+      #         nvidia.com/gpu: 1
+      # nodeSelector:
+      #   nvidia.com/gpu: 'true'
+  selector:
+    matchLabels:
+      type: inference-server
+        
+
+
