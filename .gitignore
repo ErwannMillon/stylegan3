@@ -1,0 +1,10 @@
+*out*
+*results*
+*dataset*
+*data*
+*checkpoint*
+*ckpt*
+__pycache__
+.git
+.github
+docs
